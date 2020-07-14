@@ -36,7 +36,7 @@ PS: You can create a repository either in an empty folder or in an folder with e
 
 ## Staging Files
 
-![image-20200611143349246](E:\notes\git_github_tutorial.assets\image-20200611143349246.png)
+![image-20200611143349246](git_github_tutorial.assets\image-20200611143349246.png)
 
 The modified files in the repository need to be put in staging area first, then can be committed.
 
@@ -58,7 +58,7 @@ After adding the wanted modified files in the staging area, we can do commit.
 
 ## Undoing Stuff
 
-![image-20200611181138684](E:\notes\git_github_tutorial.assets\image-20200611181138684.png)
+![image-20200611181138684](git_github_tutorial.assets\image-20200611181138684.png)
 
 ### checkout commit
 
@@ -86,7 +86,7 @@ danger, will set the commit history back to one particular commit state permanen
 
 ## Creating Branches
 
-![image-20200611184454006](E:\notes\git_github_tutorial.assets\image-20200611184454006.png)
+![image-20200611184454006](git_github_tutorial.assets\image-20200611184454006.png)
 
 The feature branch will not affect the master branch. You can use it to test new features, if you like it, you can merge it with the master branch, if you delete it, the master branch will still be stable. You can also work in team, you and you teammate can work on different feature branches.
 
@@ -121,7 +121,7 @@ If you tried the mentioned steps to merge the branches, but conflicts happens, t
 
 ## Intro
 
-![image-20200611193040228](E:\notes\git_github_tutorial.assets\image-20200611193040228.png)
+![image-20200611193040228](git_github_tutorial.assets\image-20200611193040228.png)
 
 ### Push an Existing Local Repo to GitHub
 
