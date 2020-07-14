@@ -373,3 +373,92 @@ $ hexo s
 ### 插入Vimeo或者YouTube视频
 
 在Vimeo上的视频下找到Share标签，点击之后复制Embed下面的代码放入需要的markdown文档里即可。
+
+### 添加图片点击放大功能
+
+我用的是phantom主题，没有自带图片放大功能，大部分介绍贴都是next主题，自己研究了一下怎么部署这个插件，通用方法在各个主题上应该是一致的。
+
+我用了fancybox插件：
+
+- [Fancybox](http://fancyapps.com/fancybox/3/)
+- [Fancybox官方文档](https://fancyapps.com/fancybox/3/docs/)
+- [Fancybox的github地址](https://github.com/fancyapps/fancybox)
+
+参考博客内容：
+
+- [使用 Fancybox 为博客添加图片放大预览功能](https://blog.ojhdt.com/20190622/fancybox/)
+- [Hexo部分图片禁用Fancybox](https://fuhailin.github.io/Hexo-images/)
+
+具体步骤如下：
+
+- **第一步，引入Fancybox库**
+
+将以下代码（代码在[Fancybox主页](http://fancyapps.com/fancybox/3/)上可找到）添加到 `</head>` 标签前。由于 Hexo 的特殊文件结构，head 部分通常被单独划分至 `/themes/主题名/layout/_partial/head.ejs` 中。在不同主题中该路径可能有所更改。
+
+```ejs
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+```
+
+至此，Fancybox 最基本的功能已经成功安装。
+
+根据官方文档指引，此时可以在文章中加入以下代码来建立一张可以预览的图片。
+
+```ejs
+<a data-fancybox="gallery" href="big_1.jpg"><img src="small_1.jpg"></a>
+```
+
+（我没有尝试成功，不过不影响接下来的步骤。）
+
+因为这个时候fancybox还不能应用在网站旧的图片上，所以接下来要进行一些处理。
+
+- **第二步，将Fancybox应用到页面中**
+
+在` /themes/主题名/source/js/`下建立 `warp.js` ，填入以下内容：
+
+```js
+$("img").not('.logo img').each(function () {
+   // $(this).attr("data-fancybox", "gallery"); 直接给img添加data-fancybox会导致点击图片后图片消失
+    var element = document.createElement("a");
+    $(element).attr("data-fancybox", "gallery");
+    $(element).attr("href", $(this).attr("src"));
+    $(this).wrap(element);
+});
+```
+
+> PS：该段代码将在博客文件读取后执行，用于向 `<img>` 标签外嵌套 FancyBox 所要求的 `<a>` 标签。但由于该代码将硬性将 FancyBox 应用于所有图片文件，包括 图标，按钮等不希望应用的图片素材。因此需要修改 `.not()` 排除部分对象，如本例中的.not(‘.logo img’)。类名一般可以在 `themes/主题名/source/css(scss)/` 中对应文件找出，具体情况应对比 js 文件和 css 文件。在phantom主题中我没有在`themes/主题名/source/css(scss)/` 中找到，但是根据查看public文件夹中的index.html代码，找到了我的主题的logo是属于logo类里的symbol类的，在这里我就用了logo类去排除我的logo被应用fancybox。
+
+用以下代码在 `</footer>` 前引入刚刚建立的 js 。footer 部分通常被单独划分至 `/themes/主题名/layout/_partial/footer.ejs` 中。
+
+```js
+<script src="/js/warp.js"></script>
+```
+
+
+
+- **第三步，Hexo部分图片禁用fancybox**
+
+找到的教程贴里一般会说去`/themes/主题名/source/js/`里找`script.js`或是`utils.js`相应代码段修改，不过在phantom主题下没有看到网上说的那些代码段，于是我尝试在刚刚写的`warp.js`里加了两句代码，变成了：
+
+```js
+$("img").not('.logo img').each(function () {
+   // $(this).attr("data-fancybox", "gallery"); 直接给img添加data-fancybox会导致点击图片后图片消失
+    var element = document.createElement("a");
+    var $image = $(this);
+    if ($(this).hasClass('nofancybox')) return;
+    $(element).attr("data-fancybox", "gallery");
+    $(element).attr("href", $(this).attr("src"));
+    $(this).wrap(element);
+});
+```
+
+之后在markdown里编辑文章使用img标签的时候，加上`class="nofancybox"`即可禁用，范例如下：
+
+```html
+<div align="center"><img src=/assets/arch_design_reformable/ad_r_img_02.jpg class="nofancybox" width="100%" /></div>
+```
+
+
+
