@@ -152,7 +152,7 @@ More info: [Server](https://hexo.io/docs/server.html)
 $ hexo s
 ```
 
-- 这时候命令行里会出现本地测试地址，一般是 http://localhost:4000，打开浏览器输入该地址就可以预览生成的网站页面了。
+- 这时候命令行里会出现本地测试地址，一般是 <http://localhost:4000>，打开浏览器输入该地址就可以预览生成的网站页面了。
 
 ### 测试网站雏形
 
@@ -166,8 +166,7 @@ $ hexo g
 $ hexo s
 ```
 
-- 在浏览器中输入 http://localhost:4000
-- 可以看到出现hexo的基本界面
+- 在浏览器中输入 <http://localhost:4000>可以看到出现hexo的基本界面
 
 ## 推送网站到GitHub
 
@@ -187,7 +186,7 @@ $ hexo d
 
 More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
 
-在使用这条命令之前我们应该先修改站点配置文件，并且安装Git部署插件。
+在使用这条命令之前我们应该先修改站点配置文件，并且安装Git部署插件，详见接下来两条内容的介绍。
 
 ### 修改站点配置文件
 
@@ -209,17 +208,21 @@ More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
 
 我们在这里需要打开的是**站点配置文件**的`_config.yml`。打开文件后翻到文件末尾，修改为：
 
+```
 deploy:
 	type: git
 	repo: 这里填入你之前在GitHub上创建仓库的完整路径（攻略说后面要加上 .git，不过我没加好像也没问题）
 	branch: master
+```
 
 我的是：
 
+```
 deploy:
   type: git
   repo: https://github.com/zhong-ruqing/zhong-ruqing.github.io
   branch: master
+```
 
 保存设置好的站点配置文件。设置站点配置其实就是给`hexo d `这个命令做相应的配置，让hexo知道你要把blog部署在哪个位置，很显然，我是要部署在我的GitHub的仓库里。
 
@@ -241,9 +244,9 @@ $ hexo g
 $ hexo d
 ```
 
-完成后，打开浏览器，在地址栏输入你的放置个人网站的仓库路径，即 [http://xxxx.github.io](https://link.zhihu.com/?target=http%3A//xxxx.github.io) （可以在GitHub仓库对应的Settings中找到GitHub Pages一栏，下面有一行写着“https://xxxx.github.io/”）。
+完成后，打开浏览器，在地址栏输入你的放置个人网站的仓库路径，即 <http://xxxx.github.io>（可以在GitHub仓库对应的Settings中找到GitHub Pages一栏，下面有一行写着<https://xxxx.github.io/>）。
 
-我的是https://zhong-ruqing.github.io/。
+我的是<https://zhong-ruqing.github.io/>。
 
 这时候打开浏览器输入该地址，应该就可以看到自己发布的网页了。
 
@@ -262,7 +265,7 @@ $ hexo new "文章名称"
 ### 编辑预览
 
 - 通过带有预览样式的Markdown编辑器实时预览书写的博文样式
-- 也可以通过命令` hexo s --debug `在本地浏览器的 http://localhost:4000 预览博文效果
+- 也可以通过命令` hexo s --debug `在本地浏览器的 <http://localhost:4000> 预览博文效果
 
 ### 发布
 
@@ -359,18 +362,14 @@ $ hexo g
 $ hexo s
 ```
 
-
-
-
-
 ## 进阶功能
 
 ### Hexo 标签插件（Tag Plugins）
 
 <https://hexo.io/zh-cn/docs/tag-plugins.html>
 
-用于在文章中快速插入特定内容的插件
+用于在文章中快速插入特定内容的插件。
 
 ### 插入Vimeo或者YouTube视频
 
-在Vimeo上的视频下找到Share标签，点击之后复制Embed下面的代码放入需要的markdown文档里即可
+在Vimeo上的视频下找到Share标签，点击之后复制Embed下面的代码放入需要的markdown文档里即可。
