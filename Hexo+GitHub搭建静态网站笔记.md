@@ -334,15 +334,15 @@ zhongruqing.com
 
 完成这三步之后，打开浏览器输入自己的个性化域名，应该会直接进入自己搭建的网站了。
 
-## 常用命令
+# 常用命令
 
-### 简历新页面（Create a new page）
+## 简历新页面（Create a new page）
 
 ```bash
 $ hexo new page "My new Page"
 ```
 
-### 清除网页缓存（Clean）
+## 清除网页缓存（Clean）
 
 ```bash
 $ hexo clean
@@ -362,19 +362,19 @@ $ hexo g
 $ hexo s
 ```
 
-## 进阶功能
+# 进阶功能
 
-### Hexo 标签插件（Tag Plugins）
+## Hexo 标签插件（Tag Plugins）
 
 <https://hexo.io/zh-cn/docs/tag-plugins.html>
 
 用于在文章中快速插入特定内容的插件。
 
-### 插入Vimeo或者YouTube视频
+## 插入Vimeo或者YouTube视频
 
 在Vimeo上的视频下找到Share标签，点击之后复制Embed下面的代码放入需要的markdown文档里即可。
 
-### 添加图片点击放大功能
+## 添加图片点击放大功能
 
 我用的是phantom主题，没有自带图片放大功能，大部分介绍贴都是next主题，自己研究了一下怎么部署这个插件，通用方法在各个主题上应该是一致的。
 
@@ -460,5 +460,89 @@ $("img").not('.logo img').each(function () {
 <div align="center"><img src=/assets/arch_design_reformable/ad_r_img_02.jpg class="nofancybox" width="100%" /></div>
 ```
 
+## 在博客中链接PDF
 
+### 方法一：提供一个可点击的链接
+
+在网站文件夹根目录下source文件夹中的assets文件夹里面创建一个pdf文件夹，把需要放置在文中的pdf文件放入文件夹中，在文中写出该文件的相对位置：
+
+```markdown
+<a href=../assets/pdf/CV_EN.pdf>CV_EN</a>
+```
+
+**相对位置怎么用**
+
+1. 文件在当前目录下（以图像文件为例，当前项目文件为中心）
+
+```
+"./test.jpg"或者".test.jpg"
+```
+
+2. 文件在上层目录
+
+- 在上层目录下
+
+```
+"../test.jpg"
+```
+
+- 在上层目录的一个assets文件夹下
+
+```
+"../assets/test.jpg"
+```
+
+- 在上上层目录下
+
+```
+"../../test.jpg"
+```
+
+3. 文件在下一层目录的一个image文件夹中
+
+```
+"./image/test.jpg"
+```
+
+
+
+### 方法二：利用hexo-pdf插件直接在文中预览pdf
+
+[参考教程：hexo中如何插入pdf插件](https://www.dazhuanlan.com/2020/03/14/5e6c59720f14c/)
+
+插件地址：<https://github.com/superalsrk/hexo-pdf/>
+
+#### 插件安装
+
+在网站文件夹根目录中gitbash下输入：
+
+```bash
+$ npm install --save hexo-pdf
+```
+
+#### 插件使用
+
+### Normal PDF
+
+```markdown
+{% pdf http://7xov2f.com1.z0.glb.clouddn.com/bash_freshman.pdf %}
+```
+
+or
+
+```markdown
+{% pdf ./bash_freshman.pdf %}
+```
+
+### Google drive
+
+```markdown
+{% pdf https://drive.google.com/file/d/0B6qSwdwPxPRdTEliX0dhQ2JfUEU/preview %}
+```
+
+### Slideshare
+
+```markdown
+{% pdf http://www.slideshare.net/slideshow/embed_code/key/8Jl0hUt2OKUOOE %}
+```
 
