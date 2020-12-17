@@ -78,17 +78,47 @@
 | 7                                                         | 想绘制一张属于自己的城市地图，看看自己在城市的哪些角落留下了怎么样的回忆 | 用户能在地图上留下足迹图钉                                   | 发布足迹图钉                                                 |
 | ...                                                       | ...                                                          | ...                                                          | ...                                                          |
 
+<br />
 
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
 
 ## 3. 产品结构
 
 ### 3.1 产品功能结构
 
-<div align="center"><img src=./co_city.assets/co_city_功能结构图.svg width="100%" /></div>
+<div align="center"><img src=./co_city.assets/co_city_功能结构图.svg width="85%" /></div>
 
 ### 3.2 产品信息结构
 
-<div align="center"><img src=./co_city.assets/co_city_信息结构图.svg width="100%" /></div>
+<div align="center"><img src=./co_city.assets/co_city_信息结构图.svg width="85%" /></div>
 
 
 
@@ -108,7 +138,73 @@
 
 只有支持AR功能的手机系统才可以查看AR图钉的具体内容，否则只显示AR图钉的标题和简介，点击查看具体内容时显示“您当前的系统不支持查看该图钉内容”。
 
+<br />
 
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
 
 ## 5. 产品流程描述
 
@@ -116,11 +212,11 @@
 
 #### 5.1.1 登录注册流程图
 
-<div align="center"><img src=./co_city.assets/co_city_登录注册流程.svg width="70%" /></div>
+<div align="center"><img src=./co_city.assets/co_city_登录注册流程.svg width="85%" /></div>
 
 #### 5.1.2 登录注册界面原型图
 
-<div align="center"><img src=./co_city.assets/co_city_登录注册界面原型图.jpg width="100%" /></div>
+<div align="center"><img src=./co_city.assets/co_city_登录注册界面原型图.jpg width="80%" /></div>
 
 ### 5.2 与图钉互动
 
@@ -130,22 +226,87 @@
 
 #### 5.2.2 与图钉互动界面原型图
 
-<div align="center"><img src=./co_city.assets/co_city_与图钉互动界面原型图.jpg width="100%" /></div>
+<div align="center"><img src=./co_city.assets/co_city_与图钉互动界面原型图.jpg width="80%" /></div>
 
 ### 5.3 添加图钉
 
 #### 5.3.1 添加图钉流程图
 
-<div align="center"><img src=./co_city.assets/co_city_添加图钉流程.svg width="70%" /></div>
+<div align="center"><img src=./co_city.assets/co_city_添加图钉流程.svg width="50%" /></div>
 
 #### 5.3.2 添加图钉界面原型图
 
+<div align="center"><img src=./co_city.assets/co_city_添加图钉界面原型图.jpg width="80%" /></div>
 
-<div align="center"><img src=./co_city.assets/co_city_添加图钉界面原型图.jpg width="100%" /></div>
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+
 
 ## 6. 产品整体页面逻辑图
 
 <div align="center"><img src=./co_city.assets/co_city_产品页面逻辑图.jpg width="100%" /></div>
+
+<br />
+
+<br />
+
+<br />
 
 ## 7. 产品页面详细说明
 
@@ -254,34 +415,21 @@
      - 位于页面底部，对应页面的文字和图标颜色加深。
      - 点击其他图标会跳转到相应页面。
 
+
+
 ## 8. 思考和总结
 
-- 需要城市部署完善的感应系统来支撑智慧响应，达到让城市与人对话的效果
-- 可以考虑加入功能，让用户能经营和布置属于自己的AR城市空间，可能可以增大用户留存率
+"Co-City"作为一款互动型产品，鼓励用户与城市的各个部分交互和对话，同时也能与城市中其他居民互动。该想法的产生是基于日趋复杂的城市系统以及智能化的未来城市发展构想。产品的实现需要城市部署完善的感应系统来支撑智慧响应，并且需要有效的算法来从城市大数据中筛选有效数据和信息提供给用户，达到让城市与人对话的效果。同时，用户在产品中留下的足迹和信息也将被收集和整理，来支撑城市未来更科学的发展决策，达到城市与居民共同影响彼此的效果。
 
+产品此阶段的设计，主要针对用户能从城市图钉中获取信息，并对感兴趣的图钉进行一系列操作，而用户自己能添加的图钉选择较少，仅有意见图钉和足迹图钉两类，未来可以考虑加入功能，让用户能经营和布置属于自己的AR城市空间，让用户对城市交互有更个性化的体验。
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+通过这一次的产品设计练习，笔者对互联网产品设计的思路进行了初步的梳理和学习，同时练习了流程图和原型图的绘制，但总体来说时一个比较粗略的设计，很多细节上的问题还有待完善，用户人群和用户需求的绘制需要结合具体的用户调研来细化，产品需求文档的书写也还需要在实战中再继续提高。
 
 
 
 ## Reference
 
 产品设计流程 <http://www.woshipm.com/pd/221499.html>
-
-
 
 用axure出产品文档 <http://www.woshipm.com/rp/3488031.html>
 
@@ -298,4 +446,58 @@ apple HMI Guidlines Official <https://developer.apple.com/design/human-interface
 axure iphone mockups <https://humbleux.com/downloads/tag/mobile-app-design/>
 
 axure非官方中文网 <https://www.axure.com.cn/rplib/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
