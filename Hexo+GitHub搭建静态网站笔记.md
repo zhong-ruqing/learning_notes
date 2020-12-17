@@ -336,7 +336,7 @@ zhongruqing.com
 
 # 常用命令
 
-## 简历新页面（Create a new page）
+## 建立新页面（Create a new page）
 
 ```bash
 $ hexo new page "My new Page"
